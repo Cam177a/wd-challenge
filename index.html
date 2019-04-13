@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wiredelta test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="img/favicon-cube.ico"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="http://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+
+</head>
+<body>
+<nav class="menu-nav" id="menu-nav">
+
+
+        <!-- BACKGROUND -->
+    <div class="dropdown">
+            <button class="dropbtn">BACKGROUND
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                    <button onclick="backgroundColor('red')">Red</button>
+                    <button onclick="backgroundColor('orange')">Orange</button>
+                    <button onclick="backgroundColor('green')">Green</button>
+                    <button onclick="backgroundColor('blue')">Blue</button>
+          </div>
+    </div>
+
+    <!-- QUOTES btn -->
+    <button type="button" id="btnQuote">Get a Quote</button>
+
+    <!-- WEATHER btn -->
+    <div id="weather-container">
+            <input type="text" name="city" id="city" placeholder="..city name">
+            <button id="btnGetWeatherForecast">Get Weather</button>
+        </div>
+
+    <!-- CHANGE TITLE btn -->
+    <div id="newTitle-container">
+            <input type="text" name="newTitle" id="newTitle" placeholder="..insert a new title">
+            <button type="button" onclick="getTitle()" id="btnNewTitle">Change title</button>
+        </div>
+
+        <a href="javascript:void(0);" class="menu-icon" onclick="responsiveMenu()">
+                <i class="fa fa-bars"></i>
+              </a>
+
+</nav>
+<h1 id="title">Wiredelta Challenge</h1>
+<div id="display-quote"></div>
+<!-- SHOW WEATHER -->
+<div id="showWeatherForecast"></div>
+
+<hr>
+<!-- DATE & TIME -->
+    <div class="day">
+        <p>Today is </p>
+        <input type="text" id="date" name="date" readonly>
+    </div>
+    <div id="time-container">
+        <input type="text" id="time" name="time" readonly>
+    </div>
+
+
+
+<hr id="line-animate">
+
+
+<!-- TASKS -->
+    <div class="tbl-container">
+        <h3>Today's Task:</h3>
+        <div id="container-insert">
+            <input type="text" name="newTime" id="newTime" placeholder="00:00">
+            <input type="text" name="newTask" id="newTask" placeholder="..insert new task">
+            <button type="button" id="btnInsert">insert</button>
+        </div>
+        <table id="list">
+            <thead>
+                <tr>
+                    <th class="center-in_tbl">Time: </th>
+                    <th class="center-in_tbl">Task: </th>
+                    <th class="center-in_tbl">Edit: </th>
+                    <th class="center-in_tbl">Delete: </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tbl-container">
+            <h3>Tomorrow's Task:</h3>
+            <table id="list-tomorrow">
+                <thead>
+                    <tr>
+                        <th>Time: </th>
+                        <th>Task: </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+<footer></footer>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+<script src="http://cdn.jsdelivr.net/timepicker.js/latest/timepicker.min.js"></script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
